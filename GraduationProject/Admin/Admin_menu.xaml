@@ -1,0 +1,23 @@
+﻿<Window x:Class="GraduationProject.Admin_menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraduationProject"
+        mc:Ignorable="d"
+        Title="ГИБДД: Меню администратора" Icon="/Images/Logo.png" Height="1000" Width="1900"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized" ResizeMode="CanMinimize"
+        >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/Menu_background.jpg"/>
+        </Grid.Background>
+        <TextBlock Name="tb_info" FontSize="30" Text="Роль: логин" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="476" Height="85"/>
+        <Button Content="Закончить сессию" FontSize="24" HorizontalAlignment="Right" Margin="0,0,42,36" VerticalAlignment="Bottom" Height="83" Width="203" Click="Button_Click"/>
+        <Button Content="Пользователи" Click="Button_Click_Users" FontSize="24" HorizontalAlignment="Right" Margin="0,126,10,0" VerticalAlignment="Top" Height="83" Width="203"/>
+        <Button Content="Сотрудники" Click="Button_Click_Employees" FontSize="24" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Height="83" Width="203"/>
+        <Button Content="Сессии" Click="Button_Click_Sessions" FontSize="24" HorizontalAlignment="Right" Margin="0,209,10,0" VerticalAlignment="Top" Height="83" Width="203"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="GraduationProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraduationProject"
+        mc:Ignorable="d"
+        Title="ГИБДД: Авторизация" Height="520" Width="800"
+        ResizeMode="NoResize" Icon="/Images/Logo.png" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/Auth_background.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="137*"/>
+            <ColumnDefinition Width="263*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Логин:" FontSize="18" Grid.Column="1" HorizontalAlignment="Left" Margin="14,165,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <TextBlock Text="Пароль:" FontSize="18" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="14,203,0,0"/>
+        <TextBox Name="tb_login" Width="120" FontSize="16" Height="22" Grid.Column="1" HorizontalAlignment="Left" Margin="95,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <PasswordBox Name="tb_password" Grid.Column="1" HorizontalAlignment="Left" Margin="95,206,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
+        <Button Name="Button_auth"
+        IsEnabled="False"
+        IsDefault="True"
+        Grid.Column="1"
+        FontSize="16"
+        Content="Войти"
+        HorizontalAlignment="Left"
+        Margin="58,252,0,0"
+        VerticalAlignment="Top"
+        Height="48"
+        Width="136"
+        Click="Button_Click"/>
+    </Grid>
+</Window>

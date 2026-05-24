@@ -1,0 +1,40 @@
+﻿<Window x:Class="GraduationProject.Ordinary.Mark_models"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraduationProject.Ordinary"
+        mc:Ignorable="d" Icon="/Images/Logo.png"
+        Title="ГИБДД: Марки и модели машин" Height="1000" Width="1900"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/Background.jpg"/>
+        </Grid.Background>
+        <DataGrid Name="data_grid_mark_models" ItemsSource="{Binding}"
+          AutoGenerateColumns="False" FontSize="17"
+          CanUserAddRows="False"
+          IsReadOnly="True" Margin="89,101,89,118">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Марка" Binding="{Binding Марка}" />
+                <DataGridTextColumn Header="Модель" Binding="{Binding Модель}" />
+                <DataGridTextColumn Header="Категория" Binding="{Binding Категория}" />
+                <DataGridTextColumn Header="Кузов" Binding="{Binding Кузов}" />
+                <DataGridTemplateColumn Header="Фото" Width="120">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Фото}" MouseLeftButtonUp="Image_click"
+                           Width="100"
+                           Height="60"
+                           Stretch="Uniform"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Image x:Name="image_big" Visibility="Hidden"
+               Stretch="Uniform" Margin="205,144,205,184" MouseLeftButtonUp="Big_image_click"/>
+        <Button Content="Назад" Click="Button_Click_back" FontSize="24" HorizontalAlignment="Left" Margin="42,0,0,31" VerticalAlignment="Bottom" Height="66" Width="171"/>
+    </Grid>
+</Window>
